@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21991D61AAF452300C71510 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21991D51AAF452300C71510 /* RootViewController.m */; };
 		E22994F81AAE0B56007056C4 /* story1.json in Resources */ = {isa = PBXBuildFile; fileRef = E22994F71AAE0B56007056C4 /* story1.json */; };
 		E22994FB1AAE0C51007056C4 /* caption.m in Sources */ = {isa = PBXBuildFile; fileRef = E22994FA1AAE0C51007056C4 /* caption.m */; };
 		E251136F1AA142A100AECA5C /* footage.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E251136E1AA142A100AECA5C /* footage.mp4 */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E21991D41AAF452300C71510 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E21991D51AAF452300C71510 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E22994F71AAE0B56007056C4 /* story1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story1.json; sourceTree = "<group>"; };
 		E22994F91AAE0C51007056C4 /* caption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caption.h; sourceTree = "<group>"; };
 		E22994FA1AAE0C51007056C4 /* caption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caption.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				E2E0F9D41AA0F86600CDAEB0 /* AppDelegate.h */,
 				E2E0F9D51AA0F86600CDAEB0 /* AppDelegate.m */,
 				E2E0F9D71AA0F86600CDAEB0 /* ViewController.h */,
+				E21991D41AAF452300C71510 /* RootViewController.h */,
+				E21991D51AAF452300C71510 /* RootViewController.m */,
 				E2E0F9D81AA0F86600CDAEB0 /* ViewController.m */,
 				E2E5AA3E1AAA197E0085647A /* StoryModel.h */,
 				E22994F91AAE0C51007056C4 /* caption.h */,
@@ -251,6 +256,7 @@
 			files = (
 				E2E0F9D91AA0F86600CDAEB0 /* ViewController.m in Sources */,
 				E22994FB1AAE0C51007056C4 /* caption.m in Sources */,
+				E21991D61AAF452300C71510 /* RootViewController.m in Sources */,
 				E2E5AA401AAA197E0085647A /* StoryModel.m in Sources */,
 				E2E0F9D61AA0F86600CDAEB0 /* AppDelegate.m in Sources */,
 				E2E0F9D31AA0F86600CDAEB0 /* main.m in Sources */,

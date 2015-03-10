@@ -12,6 +12,12 @@
 #import "StoryModel.h"
 
 @interface ViewController : UIViewController
+
+
+
+// Video and captions
+@property NSUInteger pageIndex;
+
 @property (strong,nonatomic) NSURL *videoURL;
 @property (strong,nonatomic) MPMoviePlayerController *videoController;
 @property (strong, nonatomic) StoryModel *storyModel;

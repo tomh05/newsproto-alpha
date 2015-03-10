@@ -17,26 +17,26 @@
 
 
 
+
 - (void)viewDidLoad {
+   [super viewDidLoad];
+
    
    self.storyModel = [[StoryModel alloc] init];
    NSURL *captionsURL = [[NSBundle mainBundle] URLForResource:@"story1" withExtension:@"json"];
    [self.storyModel loadFromURL:captionsURL];
-
-   
-   
-   [super viewDidLoad];
-   // Do any additional setup after loading the view, typically from a nib.
-   
-   [self initVideo];
-
-
+[self initVideo];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
    [super didReceiveMemoryWarning];
    // Dispose of any resources that can be recreated.
 }
+
+
+
 
 - (void)initVideo {
    NSURL *vidUrl = [[NSBundle mainBundle] URLForResource:@"plane" withExtension:@"mov"];
@@ -48,7 +48,7 @@
    
    CGFloat w = self.view.bounds.size.width;
    CGFloat h = 9.0f * w / 16.0f;
-   [self.videoController.view setFrame:CGRectMake(0, 120, w,h)];
+   [self.videoController.view setFrame:CGRectMake(0, 0, w,h)];
    //[self.videoController.view setFrame:[[self view] bounds]];
    [self.view addSubview:self.videoController.view];
    
