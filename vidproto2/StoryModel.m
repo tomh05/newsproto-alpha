@@ -21,10 +21,7 @@
    
    self.captions = [[NSMutableArray alloc] init];
    NSLog(@"Loading from URL %@",url);
-   // number formatter
-   NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-   f.numberStyle = NSNumberFormatterDecimalStyle;
-   
+    
    NSString *jsonString = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:NULL];
    NSError *e = nil;
    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: [jsonString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&e];
@@ -33,15 +30,8 @@
    } else {
       for(NSDictionary *item in jsonArray) {
             NSLog(@"item is %@",item);
-         //NSMutableDictionary *newItem = [[NSMutableDictionary alloc] initWithDictionary:item];
          [self.captions addObject:item];
-         //newItem[@"start"] = [f numberFromString:item[@"start"]];
-         //newItem[@"end"] = [f numberFromString:item[@"end"]];
-         //  NSLog(@"item is %@",newItem);
-         
-         //[self.captions addObject:newItem];
       }
-            NSLog(@"item is %@",self.captions.firstObject);
    }
    
 }
