@@ -19,13 +19,16 @@
 
 
 - (void)viewDidLoad {
+   self.captions = [[NSMutableDictionary alloc] init];
    [super viewDidLoad];
 
    
-   self.storyModel = [[StoryModel alloc] init];
-   NSURL *captionsURL = [[NSBundle mainBundle] URLForResource:@"story1" withExtension:@"json"];
-   [self.storyModel loadFromURL:captionsURL];
+
 [self initVideo];
+}
+
+-(void) setCaptions:(NSMutableDictionary *)caps{
+   self.captions = caps;
 }
 
 
@@ -66,7 +69,7 @@
       NSLog(@"call");
    
    //NSString * body = [[NSString alloc] init];
-   for(NSDictionary *caption in self.storyModel.getCaptions) {
+   for(NSDictionary *caption in self.captions) {
 
       if ([caption[@"start"] doubleValue] <self.videoController.currentPlaybackTime && [caption[@"end"] doubleValue] >self.videoController.currentPlaybackTime ) {
 

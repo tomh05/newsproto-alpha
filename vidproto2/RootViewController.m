@@ -16,9 +16,14 @@
 @implementation RootViewController
 
 - (void)viewDidLoad {
+   NSLog(@"view loaded");
     [super viewDidLoad];
-   
-   
+   // load story
+   self.storyModel = [[StoryModel alloc] init];
+   NSURL *captionsURL = [[NSBundle mainBundle] URLForResource:@"story2" withExtension:@"json"];
+   [self.storyModel loadFromURL:captionsURL];
+
+      NSLog(@"creating pageviewcontroller");
    // create page view controller
    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
    self.pageViewController.dataSource = self;
@@ -33,7 +38,7 @@
    [self addChildViewController:_pageViewController];
    [self.view addSubview:_pageViewController.view];
    [self.pageViewController didMoveToParentViewController:self];
-
+      NSLog(@"end");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,11 +64,19 @@
 
 
 - (ViewController* )viewControllerAtIndex:(NSUInteger)index {
-
-   if (index >= 5) return nil;
+      NSLog(@"viewcontrolleratindex %d",index);
+   if (index >= self.storyModel.chapters.count-1) return nil;
    
    ViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentViewController"];
    viewController.pageIndex = index;
+      NSLog(@"here");
+   
+         NSLog(@"here %@",self.storyModel.chapters[index][@"captions"]);
+   NSMutableDictionary * a = [[NSMutableDictionary alloc]init];
+   a = self.storyModel.chapters[index][@"captions"];
+   
+   [viewController setCaptions:self.storyModel.chapters[index][@"captions"]];
+         NSLog(@"here2");
    return viewController;
    
 

@@ -13,10 +13,12 @@
 
 @property (nonatomic) NSMutableArray* captions;
 
+@property (nonatomic) NSString * title;
+@property (nonatomic) NSArray * chapters;
+@property (nonatomic) NSDictionary *extras;
+
 -(void) loadFromURL:(NSURL*) url;
 -(void)addCaption:(NSString*)caption startTime:(NSNumber*)start endTime:(NSNumber*) end;
 
--(NSDictionary*)getCaption:(int)i;
--(NSMutableArray*)getCaptions;
 
 @end

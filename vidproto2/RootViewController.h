@@ -11,6 +11,9 @@
 
 @interface RootViewController : UIViewController <UIPageViewControllerDataSource>
 
+
+@property (strong, nonatomic) StoryModel *storyModel;
+
 @property (strong,nonatomic) UIPageViewController* pageViewController;
 
 @property (weak, nonatomic) IBOutlet UILabel *pageIndicatorLabel;
