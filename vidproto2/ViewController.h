@@ -7,9 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "StoryModel.h"
 
 @interface ViewController : UIViewController
+@property (strong,nonatomic) NSURL *videoURL;
+@property (strong,nonatomic) MPMoviePlayerController *videoController;
+@property (strong, nonatomic) StoryModel *storyModel;
+@property (strong,nonatomic) NSTimer *videoTimer;
 
 
+
+@property (weak, nonatomic) IBOutlet UILabel *caption;
+
+-(void)initVideo;
+
+-(void)timeCallback;
+- (IBAction)hitplay:(id)sender;
 @end
 

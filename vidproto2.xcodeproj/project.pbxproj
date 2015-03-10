@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22994F81AAE0B56007056C4 /* story1.json in Resources */ = {isa = PBXBuildFile; fileRef = E22994F71AAE0B56007056C4 /* story1.json */; };
+		E22994FB1AAE0C51007056C4 /* caption.m in Sources */ = {isa = PBXBuildFile; fileRef = E22994FA1AAE0C51007056C4 /* caption.m */; };
+		E251136F1AA142A100AECA5C /* footage.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E251136E1AA142A100AECA5C /* footage.mp4 */; };
 		E2E0F9D31AA0F86600CDAEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E0F9D21AA0F86600CDAEB0 /* main.m */; };
 		E2E0F9D61AA0F86600CDAEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E0F9D51AA0F86600CDAEB0 /* AppDelegate.m */; };
 		E2E0F9D91AA0F86600CDAEB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E0F9D81AA0F86600CDAEB0 /* ViewController.m */; };
@@ -14,6 +17,8 @@
 		E2E0F9DE1AA0F86600CDAEB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E0F9DD1AA0F86600CDAEB0 /* Images.xcassets */; };
 		E2E0F9E11AA0F86700CDAEB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2E0F9DF1AA0F86700CDAEB0 /* LaunchScreen.xib */; };
 		E2E0F9ED1AA0F86700CDAEB0 /* vidproto2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E0F9EC1AA0F86700CDAEB0 /* vidproto2Tests.m */; };
+		E2E0F9FA1AA13D6A00CDAEB0 /* plane.mov in Resources */ = {isa = PBXBuildFile; fileRef = E2E0F9F91AA13D6A00CDAEB0 /* plane.mov */; };
+		E2E5AA401AAA197E0085647A /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E5AA3F1AAA197E0085647A /* StoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E22994F71AAE0B56007056C4 /* story1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story1.json; sourceTree = "<group>"; };
+		E22994F91AAE0C51007056C4 /* caption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caption.h; sourceTree = "<group>"; };
+		E22994FA1AAE0C51007056C4 /* caption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caption.m; sourceTree = "<group>"; };
+		E251136E1AA142A100AECA5C /* footage.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = footage.mp4; sourceTree = "<group>"; };
 		E2E0F9CD1AA0F86600CDAEB0 /* vidproto2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vidproto2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E0F9D11AA0F86600CDAEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E0F9D21AA0F86600CDAEB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +49,9 @@
 		E2E0F9E61AA0F86700CDAEB0 /* vidproto2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vidproto2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E0F9EB1AA0F86700CDAEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E0F9EC1AA0F86700CDAEB0 /* vidproto2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vidproto2Tests.m; sourceTree = "<group>"; };
+		E2E0F9F91AA13D6A00CDAEB0 /* plane.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = plane.mov; sourceTree = "<group>"; };
+		E2E5AA3E1AAA197E0085647A /* StoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryModel.h; sourceTree = "<group>"; };
+		E2E5AA3F1AAA197E0085647A /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +93,16 @@
 		E2E0F9CF1AA0F86600CDAEB0 /* vidproto2 */ = {
 			isa = PBXGroup;
 			children = (
+				E2E0F9F61AA13D1B00CDAEB0 /* Resources */,
 				E2E0F9D41AA0F86600CDAEB0 /* AppDelegate.h */,
 				E2E0F9D51AA0F86600CDAEB0 /* AppDelegate.m */,
 				E2E0F9D71AA0F86600CDAEB0 /* ViewController.h */,
 				E2E0F9D81AA0F86600CDAEB0 /* ViewController.m */,
+				E2E5AA3E1AAA197E0085647A /* StoryModel.h */,
+				E22994F91AAE0C51007056C4 /* caption.h */,
+				E22994FA1AAE0C51007056C4 /* caption.m */,
+				E22994F71AAE0B56007056C4 /* story1.json */,
+				E2E5AA3F1AAA197E0085647A /* StoryModel.m */,
 				E2E0F9DA1AA0F86600CDAEB0 /* Main.storyboard */,
 				E2E0F9DD1AA0F86600CDAEB0 /* Images.xcassets */,
 				E2E0F9DF1AA0F86700CDAEB0 /* LaunchScreen.xib */,
@@ -117,6 +135,15 @@
 				E2E0F9EB1AA0F86700CDAEB0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2E0F9F61AA13D1B00CDAEB0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2E0F9F91AA13D6A00CDAEB0 /* plane.mov */,
+				E251136E1AA142A100AECA5C /* footage.mp4 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E0F9DC1AA0F86600CDAEB0 /* Main.storyboard in Resources */,
+				E2E0F9FA1AA13D6A00CDAEB0 /* plane.mov in Resources */,
+				E251136F1AA142A100AECA5C /* footage.mp4 in Resources */,
+				E22994F81AAE0B56007056C4 /* story1.json in Resources */,
 				E2E0F9E11AA0F86700CDAEB0 /* LaunchScreen.xib in Resources */,
 				E2E0F9DE1AA0F86600CDAEB0 /* Images.xcassets in Resources */,
 			);
@@ -220,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E0F9D91AA0F86600CDAEB0 /* ViewController.m in Sources */,
+				E22994FB1AAE0C51007056C4 /* caption.m in Sources */,
+				E2E5AA401AAA197E0085647A /* StoryModel.m in Sources */,
 				E2E0F9D61AA0F86600CDAEB0 /* AppDelegate.m in Sources */,
 				E2E0F9D31AA0F86600CDAEB0 /* main.m in Sources */,
 			);
@@ -412,6 +444,7 @@
 				E2E0F9F21AA0F86700CDAEB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2E0F9F31AA0F86700CDAEB0 /* Build configuration list for PBXNativeTarget "vidproto2Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +453,7 @@
 				E2E0F9F51AA0F86700CDAEB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
