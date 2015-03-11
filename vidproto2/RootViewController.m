@@ -27,6 +27,7 @@
    // create page view controller
    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
    self.pageViewController.dataSource = self;
+   self.pageViewController.delegate = self;
    
    ViewController * startingViewController = [self viewControllerAtIndex:0];
    NSArray * viewControllers = @[startingViewController];
@@ -64,33 +65,34 @@
 
 
 - (ViewController* )viewControllerAtIndex:(NSUInteger)index {
-      NSLog(@"viewcontrolleratindex %d",index);
-   if (index >= self.storyModel.chapters.count-1) return nil;
+   NSLog(@"viewcontrolleratindex %d",index);
+   if (index >= self.storyModel.chapters.count) return nil;
    
    ViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentViewController"];
    viewController.pageIndex = index;
-      NSLog(@"here");
    
-         NSLog(@"here %@",self.storyModel.chapters[index][@"captions"]);
-   NSMutableDictionary * a = [[NSMutableDictionary alloc]init];
-   a = self.storyModel.chapters[index][@"captions"];
+   //NSLog(@"here %@",[self.storyModel.chapters[index][@"captions"] class]);
+   NSMutableDictionary * c = [[NSMutableDictionary alloc]init];
    
-   [viewController setCaptions:self.storyModel.chapters[index][@"captions"]];
-         NSLog(@"here2");
+   c = self.storyModel.chapters[index];
+   
+   [viewController setCaptions:c[@"captions"]];
+   [viewController setTitle:c[@"title"]];
+   [viewController setVidFilename:c[@"vidFilename"]];
+   //[self.pageIndicatorLabel setText:self.storyModel.chapters[index][@"title"]];
    return viewController;
    
 
 }
 
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-   return 5;
+-(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+   if (completed) {
+      int index = [self.pageViewController.viewControllers.lastObject pageIndex];
+      NSLog(@"completed, index now %d",index);
+   [self.pageIndicatorLabel setText:self.storyModel.chapters[index][@"title"]];
+   }
 }
 
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-   return 0;
-}
 
 - (IBAction)nextPageButton:(id)sender {
 }

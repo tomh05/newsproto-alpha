@@ -26,9 +26,7 @@
    NSString *jsonString = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:NULL];
    NSError *e = nil;
    NSDictionary *parsedJson = [NSJSONSerialization JSONObjectWithData: [jsonString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&e];
-            NSLog(@"JSON Parsed%@",parsedJson);
    if (parsedJson) {
-         NSLog(@"JSON Parsed okay: %@",parsedJson);
       // get title
       self.title = parsedJson[@"title"];
       self.chapters = parsedJson[@"chapters"];
@@ -42,7 +40,6 @@
       NSLog(@"Failed to parse JSON, %@",e);
    }
       NSLog(@"title is %@",self.title);
-   NSLog(@"chapters is %@",self.chapters);
 }
 
 

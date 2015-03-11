@@ -18,8 +18,8 @@
 // Video and captions
 @property NSUInteger pageIndex;
 
-
-@property (strong, nonatomic) NSMutableDictionary * captions;
+@property NSString * vidFilename;
+@property (strong, nonatomic) NSMutableArray * captions;
 
 @property (strong,nonatomic) NSURL *videoURL;
 @property (strong,nonatomic) MPMoviePlayerController *videoController;
